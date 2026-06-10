@@ -1,21 +1,36 @@
 import { motion } from 'motion/react';
-import featureCards from '../assets/images/feature-cards.webp';
-import { fadeInUp, viewportOnce } from '../lib/animations';
+import card1 from '../assets/images/card1.webp';
+import card2 from '../assets/images/card2.webp';
+import card3 from '../assets/images/card3.webp';
+import { fadeInUp, staggerContainer, viewportOnce } from '../lib/animations';
+
+const cards = [
+  { src: card1, alt: 'Tarjeta de estudio del carácter あ con la mascota de Denchi' },
+  { src: card2, alt: 'Tarjeta de estudio にほん / 日本 / Nihon / Japón' },
+  { src: card3, alt: 'Lista de categorías: Vocabulario, Hiragana & Katakana, Kanji y Auditivos' },
+];
 
 export default function FeatureCards() {
   return (
     <section className="bg-[#f4f7fe] px-6 py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl">
-        <motion.img
-          src={featureCards}
-          alt="Repasa japonés de forma simple: tarjetas de hiragana, kanji y vocabulario con lecciones cortas y prácticas para aprender a tu ritmo"
-          className="w-full"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-        />
-      </div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="mx-auto flex max-w-7xl flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center"
+      >
+        {cards.map((card) => (
+          <motion.img
+            key={card.src}
+            src={card.src}
+            alt={card.alt}
+            variants={fadeInUp}
+            whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+            className="w-full max-w-xs sm:w-[260px] lg:w-[320px]"
+          />
+        ))}
+      </motion.div>
     </section>
   );
 }

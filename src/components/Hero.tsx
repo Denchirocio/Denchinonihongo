@@ -1,7 +1,25 @@
 import { motion } from 'motion/react';
-import heroIllustration from '../assets/images/hero-illustration.webp';
 import playIcon from '../assets/images/play-icon.webp';
+import heroPhone from '../assets/images/hero-phone.webp';
+import sparkle1 from '../assets/images/hero-sparkle-1.webp';
+import sparkle2 from '../assets/images/hero-sparkle-2.webp';
+import sparkle3 from '../assets/images/hero-sparkle-3.webp';
+import sparkle4 from '../assets/images/hero-sparkle-4.webp';
+import sparkle5 from '../assets/images/hero-sparkle-5.webp';
+import sparkle6 from '../assets/images/hero-sparkle-6.webp';
 import { PLAY_STORE_URL } from '../lib/constants';
+
+const BLOB_PATH =
+  'M346.937 65.8029C403.712 72.6684 453.816 95.4778 504.818 121.35C566.645 152.714 662.035 163.982 674.804 232.124C688.043 302.777 586.727 341.294 558.412 407.366C534.339 463.543 561.993 534.751 524.449 582.978C482.086 637.395 415.749 674.448 346.937 679.018C275.989 683.729 210.842 646.811 151.43 607.747C89.3463 566.927 8.38548 525.102 0.486528 451.222C-7.50404 376.486 85.1616 332.322 114.588 263.159C139.854 203.771 109.453 121.27 158.643 79.4888C207.81 37.727 282.895 58.0585 346.937 65.8029Z';
+
+const sparkles = [
+  { src: sparkle1, origin: '13% 36%', duration: 2.4, delay: 0 },
+  { src: sparkle2, origin: '86% 75%', duration: 2.8, delay: 0.4 },
+  { src: sparkle3, origin: '90% 25%', duration: 2.2, delay: 0.8 },
+  { src: sparkle4, origin: '21% 14%', duration: 3, delay: 1.2 },
+  { src: sparkle5, origin: '16% 66%', duration: 2.6, delay: 0.6 },
+  { src: sparkle6, origin: '83% 47%', duration: 2.4, delay: 1.6 },
+];
 
 export default function Hero() {
   return (
@@ -36,20 +54,49 @@ export default function Hero() {
         </motion.a>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.92 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-        className="w-full max-w-md shrink-0 lg:max-w-none lg:flex-1"
-      >
-        <motion.img
-          src={heroIllustration}
-          alt="Vista previa de la app Denchi no Nihongo en un celular"
-          className="mx-auto w-full max-w-sm lg:max-w-md"
-          animate={{ y: [0, -12, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      </motion.div>
+      <div className="w-full max-w-md shrink-0 lg:max-w-none lg:flex-1">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
+          className="relative mx-auto aspect-[676/735] w-full max-w-sm lg:max-w-md"
+        >
+          <motion.svg
+            viewBox="0 0 676 735"
+            fill="none"
+            className="absolute inset-0 h-full w-full"
+            animate={{ scale: [1, 1.05, 1], rotate: [0, 1.5, -1.5, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <path fill="#EEF3FD" d={BLOB_PATH} />
+          </motion.svg>
+
+          {sparkles.map((sparkle) => (
+            <motion.img
+              key={sparkle.src}
+              src={sparkle.src}
+              alt=""
+              className="absolute inset-0 h-full w-full"
+              style={{ transformOrigin: sparkle.origin }}
+              animate={{ opacity: [0.35, 1, 0.35], scale: [0.8, 1, 0.8] }}
+              transition={{
+                duration: sparkle.duration,
+                delay: sparkle.delay,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            />
+          ))}
+
+          <motion.img
+            src={heroPhone}
+            alt="Vista previa de la app Denchi no Nihongo en un celular"
+            className="absolute inset-0 h-full w-full"
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }
