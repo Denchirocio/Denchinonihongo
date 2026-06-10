@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
+import { motion } from 'motion/react';
 import storyIllustration from '../assets/images/story-illustration.webp';
+import { fadeInUp, fadeIn, staggerContainer, viewportOnce } from '../lib/animations';
 
 const timelineSteps = [
   {
@@ -38,7 +40,13 @@ export default function OriginStory() {
     <section className="bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-16 sm:gap-20">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-12">
-          <div className="flex flex-col gap-6 lg:max-w-2xl lg:gap-8">
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            className="flex flex-col gap-6 lg:max-w-2xl lg:gap-8"
+          >
             <div className="flex flex-col text-center sm:text-left">
               <p className="text-4xl font-medium text-black sm:text-5xl lg:text-[64px]">
                 Así nació
@@ -74,18 +82,31 @@ export default function OriginStory() {
                 <p className="font-semibold text-[#4b85f4]">¡Sigamos aprendiendo japonés juntos!</p>
               </div>
             </div>
-          </div>
-          <img
+          </motion.div>
+          <motion.img
             src={storyIllustration}
             alt="Mascota de Denchi estudiando japonés"
             className="w-full max-w-md lg:max-w-lg"
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
           />
         </div>
 
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0"
+        >
           {timelineSteps.map((step, i) => (
             <Fragment key={step.title}>
-              <div className="flex items-start gap-4 lg:w-[150px] lg:flex-col lg:items-center lg:gap-4 lg:text-center">
+              <motion.div
+                variants={fadeInUp}
+                className="flex items-start gap-4 lg:w-[150px] lg:flex-col lg:items-center lg:gap-4 lg:text-center"
+              >
                 <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl border border-[#d9d9d9] bg-white text-3xl lg:h-[72px] lg:w-[72px] lg:text-4xl">
                   {step.emoji}
                 </div>
@@ -93,13 +114,13 @@ export default function OriginStory() {
                   <p className="text-lg font-semibold text-[#4b85f4] lg:text-xl">{step.title}</p>
                   <p className="text-sm leading-6 text-black lg:text-base">{step.description}</p>
                 </div>
-              </div>
+              </motion.div>
               {i < timelineSteps.length - 1 && (
                 <div className="hidden lg:mt-9 lg:block lg:h-px lg:flex-1 lg:bg-[#d9d9d9]" />
               )}
             </Fragment>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
