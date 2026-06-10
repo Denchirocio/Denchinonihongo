@@ -76,7 +76,7 @@ export default function OriginStory() {
             </div>
             <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white p-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#eaf2fd]">
-                <Heart className="h-6 w-6 fill-[#296ef2] text-[#296ef2]" />
+                <Heart aria-hidden="true" className="h-6 w-6 fill-[#296ef2] text-[#296ef2]" />
               </div>
               <div className="flex flex-col gap-1 text-base sm:text-lg lg:text-xl">
                 <p className="text-black">Más que una aplicación, tu compañera de estudio.</p>
@@ -116,7 +116,10 @@ export default function OriginStory() {
                   variants={fadeInUp}
                   className="flex items-start gap-4 lg:w-[150px] lg:flex-col lg:items-center lg:gap-4 lg:text-center"
                 >
-                  <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl border border-[#d9d9d9] bg-white text-3xl lg:h-[72px] lg:w-[72px] lg:text-4xl">
+                  <div
+                    aria-hidden="true"
+                    className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl border border-[#d9d9d9] bg-white text-3xl lg:h-[72px] lg:w-[72px] lg:text-4xl"
+                  >
                     {step.emoji}
                   </div>
                   <div className="flex flex-col gap-2">

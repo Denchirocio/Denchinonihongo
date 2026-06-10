@@ -6,7 +6,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-12">
         <div className="flex items-center gap-2 whitespace-nowrap text-black">
-          <span className="text-2xl font-medium lg:text-[32px]">でんち</span>
+          <span lang="ja" className="text-2xl font-medium lg:text-[32px]">でんち</span>
           <span className="hidden text-base font-normal text-black/60 sm:inline">|</span>
           <span className="hidden text-base font-normal text-black/60 sm:inline">
             Energía para estudiar
