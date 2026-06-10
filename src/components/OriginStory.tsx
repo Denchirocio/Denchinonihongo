@@ -100,27 +100,36 @@ export default function OriginStory() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0"
+          className="flex flex-col gap-10 lg:gap-12"
         >
-          {timelineSteps.map((step, i) => (
-            <Fragment key={step.title}>
-              <motion.div
-                variants={fadeInUp}
-                className="flex items-start gap-4 lg:w-[150px] lg:flex-col lg:items-center lg:gap-4 lg:text-center"
-              >
-                <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl border border-[#d9d9d9] bg-white text-3xl lg:h-[72px] lg:w-[72px] lg:text-4xl">
-                  {step.emoji}
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-lg font-semibold text-[#4b85f4] lg:text-xl">{step.title}</p>
-                  <p className="text-sm leading-6 text-black lg:text-base">{step.description}</p>
-                </div>
-              </motion.div>
-              {i < timelineSteps.length - 1 && (
-                <div className="hidden lg:mt-9 lg:block lg:h-px lg:flex-1 lg:bg-[#d9d9d9]" />
-              )}
-            </Fragment>
-          ))}
+          <motion.p
+            variants={fadeInUp}
+            className="text-center text-3xl font-semibold text-black sm:text-4xl lg:text-[40px]"
+          >
+            Nuestro proceso
+          </motion.p>
+
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
+            {timelineSteps.map((step, i) => (
+              <Fragment key={step.title}>
+                <motion.div
+                  variants={fadeInUp}
+                  className="flex items-start gap-4 lg:w-[150px] lg:flex-col lg:items-center lg:gap-4 lg:text-center"
+                >
+                  <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl border border-[#d9d9d9] bg-white text-3xl lg:h-[72px] lg:w-[72px] lg:text-4xl">
+                    {step.emoji}
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-lg font-semibold text-[#4b85f4] lg:text-xl">{step.title}</p>
+                    <p className="text-sm leading-6 text-black lg:text-base">{step.description}</p>
+                  </div>
+                </motion.div>
+                {i < timelineSteps.length - 1 && (
+                  <div className="hidden lg:mt-9 lg:block lg:h-px lg:flex-1 lg:bg-[#d9d9d9]" />
+                )}
+              </Fragment>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
