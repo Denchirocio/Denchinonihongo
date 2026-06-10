@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import playIcon from '../assets/images/play-icon.webp';
 import heroPhone from '../assets/images/hero-phone.webp';
 import sparkle1 from '../assets/images/hero-sparkle-1.webp';
@@ -22,6 +22,8 @@ const sparkles = [
 ];
 
 export default function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="mx-auto flex w-full max-w-7xl flex-col items-center gap-12 px-6 pt-10 pb-20 lg:flex-row lg:items-center lg:gap-16 lg:px-12 lg:pt-16 lg:pb-32">
       <motion.div
@@ -53,6 +55,7 @@ export default function Hero() {
         >
           <img src={playIcon} alt="" className="h-6 w-6 sm:h-7 sm:w-7" />
           Quiero probar la App!
+          <span className="sr-only"> (se abre en una pestaña nueva)</span>
         </motion.a>
       </motion.div>
 
@@ -67,8 +70,8 @@ export default function Hero() {
             viewBox="0 0 676 735"
             fill="none"
             className="absolute inset-0 h-full w-full"
-            animate={{ scale: [1, 1.05, 1], rotate: [0, 1.5, -1.5, 0] }}
-            transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+            animate={shouldReduceMotion ? undefined : { scale: [1, 1.05, 1], rotate: [0, 1.5, -1.5, 0] }}
+            transition={shouldReduceMotion ? undefined : { duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           >
             <path fill="#EEF3FD" d={BLOB_PATH} />
           </motion.svg>
@@ -80,13 +83,17 @@ export default function Hero() {
               alt=""
               className="absolute inset-0 h-full w-full"
               style={{ transformOrigin: sparkle.origin }}
-              animate={{ opacity: [0.35, 1, 0.35], scale: [0.8, 1, 0.8] }}
-              transition={{
-                duration: sparkle.duration,
-                delay: sparkle.delay,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
+              animate={shouldReduceMotion ? { opacity: 0.7, scale: 1 } : { opacity: [0.35, 1, 0.35], scale: [0.8, 1, 0.8] }}
+              transition={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      duration: sparkle.duration,
+                      delay: sparkle.delay,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }
+              }
             />
           ))}
 
@@ -94,8 +101,8 @@ export default function Hero() {
             src={heroPhone}
             alt="Vista previa de la app Denchi no Nihongo en un celular"
             className="absolute inset-0 h-full w-full"
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            animate={shouldReduceMotion ? undefined : { y: [0, -12, 0] }}
+            transition={shouldReduceMotion ? undefined : { duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           />
         </motion.div>
       </div>

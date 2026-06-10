@@ -21,6 +21,7 @@ export default function Header() {
           <img src={playIcon} alt="" className="h-5 w-5 sm:h-6 sm:w-6" />
           <span className="hidden md:inline">Quiero probar la app</span>
           <span className="md:hidden">Probar app</span>
+          <span className="sr-only"> (se abre en una pestaña nueva)</span>
         </a>
       </div>
     </header>

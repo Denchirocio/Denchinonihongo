@@ -37,6 +37,7 @@ export default function CtaSection() {
             >
               <img src={playIcon} alt="" className="h-6 w-6" />
               Quiero probar la App!
+              <span className="sr-only"> (se abre en una pestaña nueva)</span>
             </motion.a>
           </div>
         </motion.div>

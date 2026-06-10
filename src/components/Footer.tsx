@@ -1,4 +1,5 @@
 import logoMark from '../assets/images/logo-mark.svg';
+import { WHATSAPP_URL } from '../lib/constants';
 
 export default function Footer() {
   return (
@@ -8,8 +9,14 @@ export default function Footer() {
           <span className="font-['Fredoka'] text-xl text-black">Denchi</span>
           <img src={logoMark} alt="" className="h-[22px] w-[34px]" />
         </div>
-        <a href="#" className="text-base text-black hover:underline">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-base text-black hover:underline"
+        >
           ¡Hablemos!
+          <span className="sr-only"> (se abre en una pestaña nueva)</span>
         </a>
       </div>
     </footer>
