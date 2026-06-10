@@ -79,7 +79,7 @@ export default function OriginStory() {
                 <Heart className="h-6 w-6 fill-[#4b85f4] text-[#4b85f4]" />
               </div>
               <div className="flex flex-col gap-1 text-base sm:text-lg lg:text-xl">
-                <p className="text-black">Más que una app, es tu compañera de estudio.</p>
+                <p className="text-black">Más que una aplicación, tu compañera de estudio.</p>
                 <p className="font-semibold text-[#4b85f4]">¡Sigamos aprendiendo japonés juntos!</p>
               </div>
             </div>
