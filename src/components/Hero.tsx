@@ -1,7 +1,5 @@
 import heroIllustration from '../assets/images/hero-illustration.webp';
 import playIcon from '../assets/images/play-icon.webp';
-import sparkleLight from '../assets/images/sparkle-light.webp';
-import sparkleBlue from '../assets/images/sparkle-blue.webp';
 import { PLAY_STORE_URL } from '../lib/constants';
 
 export default function Hero() {
@@ -30,26 +28,11 @@ export default function Hero() {
         </a>
       </div>
 
-      <div className="relative w-full max-w-md shrink-0 lg:max-w-none lg:flex-1">
-        <img
-          src={sparkleBlue}
-          alt=""
-          className="absolute -top-2 left-6 h-8 w-8 lg:left-16 lg:top-10 lg:h-10 lg:w-10"
-        />
-        <img
-          src={sparkleLight}
-          alt=""
-          className="absolute right-2 top-1/3 h-6 w-6 lg:right-12 lg:h-10 lg:w-10"
-        />
-        <img
-          src={sparkleLight}
-          alt=""
-          className="absolute bottom-4 left-1/4 h-5 w-5 lg:left-1/3 lg:h-6 lg:w-6"
-        />
+      <div className="w-full max-w-md shrink-0 lg:max-w-none lg:flex-1">
         <img
           src={heroIllustration}
           alt="Vista previa de la app Denchi no Nihongo en un celular"
-          className="relative mx-auto w-full max-w-sm lg:max-w-md"
+          className="mx-auto w-full max-w-sm lg:max-w-md"
         />
       </div>
     </section>
