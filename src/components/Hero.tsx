@@ -36,7 +36,7 @@ export default function Hero() {
               Repasa japonés
             </span>
             <span className="text-4xl leading-tight sm:text-5xl lg:text-[64px] lg:leading-normal">
-              de forma <span className="font-bold text-[#2375f9]">simple</span>
+              de forma <span className="font-bold text-[#176df9]">simple</span>
             </span>
           </h1>
           <p className="text-lg leading-relaxed text-[#6b7280] sm:text-xl lg:text-[32px] lg:leading-[48px]">
@@ -49,7 +49,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-2 rounded-lg bg-[#2375f9] px-5 py-3 text-lg font-medium text-white sm:text-xl lg:text-2xl"
+          className="flex items-center gap-2 rounded-lg bg-[#176df9] px-5 py-3 text-lg font-medium text-white sm:text-xl lg:text-2xl"
         >
           <img src={playIcon} alt="" className="h-6 w-6 sm:h-7 sm:w-7" />
           Quiero probar la App!

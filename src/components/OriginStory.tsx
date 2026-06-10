@@ -76,11 +76,11 @@ export default function OriginStory() {
             </div>
             <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white p-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#eaf2fd]">
-                <Heart className="h-6 w-6 fill-[#4b85f4] text-[#4b85f4]" />
+                <Heart className="h-6 w-6 fill-[#296ef2] text-[#296ef2]" />
               </div>
               <div className="flex flex-col gap-1 text-base sm:text-lg lg:text-xl">
                 <p className="text-black">Más que una aplicación, tu compañera de estudio.</p>
-                <p className="font-semibold text-[#4b85f4]">¡Sigamos aprendiendo japonés juntos!</p>
+                <p className="font-semibold text-[#296ef2]">¡Sigamos aprendiendo japonés juntos!</p>
               </div>
             </div>
           </motion.div>
@@ -120,7 +120,7 @@ export default function OriginStory() {
                     {step.emoji}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-lg font-semibold text-[#4b85f4] lg:text-xl">{step.title}</h3>
+                    <h3 className="text-lg font-semibold text-[#296ef2] lg:text-xl">{step.title}</h3>
                     <p className="text-sm leading-6 text-black lg:text-base">{step.description}</p>
                   </div>
                 </motion.div>

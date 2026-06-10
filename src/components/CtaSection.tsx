@@ -33,7 +33,7 @@ export default function CtaSection() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 rounded-lg bg-[#2375f9] px-5 py-3 text-lg font-medium text-white sm:text-xl"
+              className="flex items-center gap-2 rounded-lg bg-[#176df9] px-5 py-3 text-lg font-medium text-white sm:text-xl"
             >
               <img src={playIcon} alt="" className="h-6 w-6" />
               Quiero probar la App!
