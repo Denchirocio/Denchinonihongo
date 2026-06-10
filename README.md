@@ -28,4 +28,4 @@ Este proyecto está listo para desplegarse en [Vercel](https://vercel.com/) impo
 
 ## Pendientes
 
-- Reemplazar `PLAY_STORE_URL` en [`src/lib/constants.ts`](src/lib/constants.ts) con el link real de Google Play cuando la app esté publicada.
+- Reemplazar `WHATSAPP_URL` en [`src/lib/constants.ts`](src/lib/constants.ts) por el link de Google Play cuando la app esté publicada.

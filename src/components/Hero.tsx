@@ -7,7 +7,7 @@ import sparkle3 from '../assets/images/hero-sparkle-3.webp';
 import sparkle4 from '../assets/images/hero-sparkle-4.webp';
 import sparkle5 from '../assets/images/hero-sparkle-5.webp';
 import sparkle6 from '../assets/images/hero-sparkle-6.webp';
-import { PLAY_STORE_URL } from '../lib/constants';
+import { WHATSAPP_URL } from '../lib/constants';
 
 const BLOB_PATH =
   'M346.937 65.8029C403.712 72.6684 453.816 95.4778 504.818 121.35C566.645 152.714 662.035 163.982 674.804 232.124C688.043 302.777 586.727 341.294 558.412 407.366C534.339 463.543 561.993 534.751 524.449 582.978C482.086 637.395 415.749 674.448 346.937 679.018C275.989 683.729 210.842 646.811 151.43 607.747C89.3463 566.927 8.38548 525.102 0.486528 451.222C-7.50404 376.486 85.1616 332.322 114.588 263.159C139.854 203.771 109.453 121.27 158.643 79.4888C207.81 37.727 282.895 58.0585 346.937 65.8029Z';
@@ -44,7 +44,9 @@ export default function Hero() {
           </p>
         </div>
         <motion.a
-          href={PLAY_STORE_URL}
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
           className="flex items-center gap-2 rounded-lg bg-[#2375f9] px-5 py-3 text-lg font-medium text-white sm:text-xl lg:text-2xl"

@@ -1,5 +1,5 @@
 import playIcon from '../assets/images/play-icon.webp';
-import { PLAY_STORE_URL } from '../lib/constants';
+import { WHATSAPP_URL } from '../lib/constants';
 
 export default function Header() {
   return (
@@ -13,7 +13,9 @@ export default function Header() {
           </span>
         </div>
         <a
-          href={PLAY_STORE_URL}
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex shrink-0 items-center gap-2 rounded-lg border border-[#2375f9] px-3 py-2 text-sm font-normal text-[#2375f9] transition-colors hover:bg-[#2375f9]/5 sm:px-5 sm:text-lg"
         >
           <img src={playIcon} alt="" className="h-5 w-5 sm:h-6 sm:w-6" />
