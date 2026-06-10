@@ -28,7 +28,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="flex max-w-xl flex-col items-start gap-6 text-left lg:gap-8"
+        className="flex max-w-xl flex-col items-center gap-6 text-left lg:items-start lg:gap-8"
       >
         <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:gap-1 lg:text-left">
           <div className="flex flex-col font-medium text-black">
