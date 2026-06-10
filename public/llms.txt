@@ -1,0 +1,16 @@
+# Denchi no Nihongo
+
+> Landing page de Denchi no Nihongo, una app gratuita para repasar japonés (hiragana, katakana, kanji y vocabulario) de forma simple, en español y desde el celular.
+
+Denchi no Nihongo centraliza el repaso de japonés en un solo lugar, con lecciones cortas, ejercicios auditivos y sin publicidad invasiva. La landing presenta la propuesta de valor de la app, ejemplos del producto y un canal de contacto por WhatsApp para probarla.
+
+## Contenido de la página
+
+- [Inicio](/): presentación principal ("Repasa japonés de forma simple") con botón para probar la app.
+- Funcionalidades: ejemplos de tarjetas de estudio de hiragana/katakana, kanji paso a paso, y módulo con vocabulario, hiragana, kanji y ejercicios auditivos en un solo lugar.
+- Nuestra historia: origen del proyecto (nace de la necesidad de unificar varias apps de estudio de japonés en una sola) y proceso de desarrollo (Idea, Diseño, Desarrollo, Testing, Lanzamiento).
+- Probar la app: resumen de beneficios (lecciones cortas, 100% en español, sin publicidad invasiva, todo a tu alcance) con botón de contacto.
+
+## Contacto
+
+- WhatsApp: los botones "Quiero probar la app" abren un chat de WhatsApp para acceder a la app.
