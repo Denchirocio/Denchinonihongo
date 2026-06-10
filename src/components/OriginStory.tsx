@@ -48,14 +48,14 @@ export default function OriginStory() {
             viewport={viewportOnce}
             className="flex flex-col gap-6 lg:max-w-2xl lg:gap-8"
           >
-            <div className="flex flex-col text-center sm:text-left">
-              <p className="text-4xl font-medium text-black sm:text-5xl lg:text-[64px]">
+            <h2 className="flex flex-col text-center sm:text-left">
+              <span className="text-4xl font-medium text-black sm:text-5xl lg:text-[64px]">
                 Así nació
-              </p>
-              <p className="text-4xl font-semibold text-black sm:text-5xl lg:text-[64px]">
+              </span>
+              <span className="text-4xl font-semibold text-black sm:text-5xl lg:text-[64px]">
                 Denchi no Nihongo
-              </p>
-            </div>
+              </span>
+            </h2>
             <div className="flex flex-col gap-4 text-base leading-7 text-black sm:text-lg lg:text-2xl lg:leading-8">
               <p>
                 Denchi no Nihongo nació cuando noté que aprender japonés significaba{' '}
@@ -102,12 +102,12 @@ export default function OriginStory() {
           viewport={viewportOnce}
           className="flex flex-col gap-10 lg:gap-12"
         >
-          <motion.p
+          <motion.h2
             variants={fadeInUp}
             className="text-center text-3xl font-semibold text-black sm:text-4xl lg:text-[40px]"
           >
             Nuestro proceso
-          </motion.p>
+          </motion.h2>
 
           <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
             {timelineSteps.map((step, i) => (
@@ -120,7 +120,7 @@ export default function OriginStory() {
                     {step.emoji}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-lg font-semibold text-[#4b85f4] lg:text-xl">{step.title}</p>
+                    <h3 className="text-lg font-semibold text-[#4b85f4] lg:text-xl">{step.title}</h3>
                     <p className="text-sm leading-6 text-black lg:text-base">{step.description}</p>
                   </div>
                 </motion.div>

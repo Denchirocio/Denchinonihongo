@@ -5,9 +5,18 @@ import card3 from '../assets/images/card3.webp';
 import { fadeInUp, staggerContainer, viewportOnce } from '../lib/animations';
 
 const cards = [
-  { src: card1, alt: 'Tarjeta de estudio del carácter あ con la mascota de Denchi' },
-  { src: card2, alt: 'Tarjeta de estudio にほん / 日本 / Nihon / Japón' },
-  { src: card3, alt: 'Lista de categorías: Vocabulario, Hiragana & Katakana, Kanji y Auditivos' },
+  {
+    src: card1,
+    alt: 'Repasa japonés de forma simple: tarjeta de estudio del carácter あ con la mascota de Denchi',
+  },
+  {
+    src: card2,
+    alt: 'Aprende kanji paso a paso: tarjeta de estudio にほん / 日本 / Nihon / Japón',
+  },
+  {
+    src: card3,
+    alt: 'Todo el material en un solo lugar: vocabulario, hiragana y katakana, kanji y ejercicios auditivos',
+  },
 ];
 
 export default function FeatureCards() {

@@ -31,14 +31,14 @@ export default function Hero() {
         className="flex max-w-xl flex-col items-center gap-6 text-left lg:items-start lg:gap-8"
       >
         <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:gap-1 lg:text-left">
-          <div className="flex flex-col font-medium text-black">
-            <p className="text-4xl leading-tight sm:text-5xl lg:text-[64px] lg:leading-normal">
+          <h1 className="flex flex-col font-medium text-black">
+            <span className="text-4xl leading-tight sm:text-5xl lg:text-[64px] lg:leading-normal">
               Repasa japonés
-            </p>
-            <p className="text-4xl leading-tight sm:text-5xl lg:text-[64px] lg:leading-normal">
+            </span>
+            <span className="text-4xl leading-tight sm:text-5xl lg:text-[64px] lg:leading-normal">
               de forma <span className="font-bold text-[#2375f9]">simple</span>
-            </p>
-          </div>
+            </span>
+          </h1>
           <p className="text-lg leading-relaxed text-[#6b7280] sm:text-xl lg:text-[32px] lg:leading-[48px]">
             Hiragana, katakana, kanji y práctica real desde tu celular.
           </p>

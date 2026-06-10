@@ -23,10 +23,10 @@ export default function CtaSection() {
         >
           <img src={ctaMascot} alt="" className="w-56 sm:w-64" />
           <div className="flex flex-col items-center gap-6 lg:items-start">
-            <p className="text-center text-3xl font-medium leading-snug text-black sm:text-4xl lg:text-left lg:text-[44px]">
+            <h2 className="text-center text-3xl font-medium leading-snug text-black sm:text-4xl lg:text-left lg:text-[44px]">
               Tu práctica diaria de japonés{' '}
               <span className="font-bold text-[#2b7fff]">empieza hoy</span>
-            </p>
+            </h2>
             <motion.a
               href={WHATSAPP_URL}
               target="_blank"
