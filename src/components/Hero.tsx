@@ -23,7 +23,7 @@ const sparkles = [
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 pt-10 pb-20 lg:flex-row lg:items-center lg:gap-16 lg:px-12 lg:pt-16 lg:pb-32">
+    <section className="mx-auto flex w-full max-w-7xl flex-col items-center gap-12 px-6 pt-10 pb-20 lg:flex-row lg:items-center lg:gap-16 lg:px-12 lg:pt-16 lg:pb-32">
       <motion.div
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
