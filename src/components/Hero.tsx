@@ -30,7 +30,7 @@ export default function Hero() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="flex max-w-xl flex-col items-start gap-6 text-left lg:gap-8"
       >
-        <div className="flex flex-col gap-4 lg:gap-1">
+        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:gap-1 lg:text-left">
           <div className="flex flex-col font-medium text-black">
             <p className="text-4xl leading-tight sm:text-5xl lg:text-[64px] lg:leading-normal">
               Repasa japonés
