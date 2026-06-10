@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { Heart } from 'lucide-react';
 import { motion } from 'motion/react';
 import storyIllustration from '../assets/images/story-illustration.webp';
 import { fadeInUp, fadeIn, staggerContainer, viewportOnce } from '../lib/animations';
@@ -73,9 +74,9 @@ export default function OriginStory() {
                 Y la mejor parte? <span className="font-semibold">compartirla con todos de forma gratuita.</span>
               </p>
             </div>
-            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white p-4">
-              <div className="flex h-[60px] w-[58px] shrink-0 items-center justify-center rounded-lg bg-[#eaf2fd]">
-                <span className="text-2xl">❤️</span>
+            <div className="flex items-center gap-3 rounded-lg border border-[#d9d9d9] bg-white p-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#eaf2fd]">
+                <Heart className="h-6 w-6 fill-[#4b85f4] text-[#4b85f4]" />
               </div>
               <div className="flex flex-col gap-1 text-base sm:text-lg lg:text-xl">
                 <p className="text-black">Más que una app, es tu compañera de estudio.</p>
