@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-          className="relative mx-auto aspect-[676/735] w-full max-w-sm lg:max-w-md"
+          className="relative mx-auto aspect-[676/735] w-full max-w-md lg:max-w-lg"
         >
           <motion.svg
             viewBox="0 0 676 735"
