@@ -20,4 +20,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://denchinonihongo.vercel.app/sitemap.xml
+Sitemap: https://denchinonihongo.com/sitemap.xml
