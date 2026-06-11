@@ -21,7 +21,7 @@ export default function CtaSection() {
           variants={fadeInUp}
           className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-12"
         >
-          <img src={ctaMascot} alt="" className="w-56 sm:w-64" />
+          <img src={ctaMascot} alt="" loading="lazy" className="w-56 sm:w-64" />
           <div className="flex flex-col items-center gap-6 lg:items-start">
             <h2 className="text-center text-3xl font-medium leading-snug text-black sm:text-4xl lg:text-left lg:text-[44px]">
               Tu práctica diaria de japonés{' '}

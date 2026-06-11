@@ -88,6 +88,7 @@ export default function OriginStory() {
             src={storyIllustration}
             alt="Mascota de Denchi estudiando japonés"
             className="w-full max-w-md lg:max-w-lg"
+            loading="lazy"
             variants={fadeIn}
             initial="hidden"
             whileInView="visible"

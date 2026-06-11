@@ -34,6 +34,7 @@ export default function FeatureCards() {
             key={card.src}
             src={card.src}
             alt={card.alt}
+            loading="lazy"
             variants={fadeInUp}
             whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
             className="w-full max-w-xs sm:w-[260px] lg:w-[320px]"

@@ -11,6 +11,13 @@ Denchi no Nihongo centraliza el repaso de japonés en un solo lugar, con leccion
 - Nuestra historia: origen del proyecto (nace de la necesidad de unificar varias apps de estudio de japonés en una sola) y proceso de desarrollo (Idea, Diseño, Desarrollo, Testing, Lanzamiento).
 - Probar la app: resumen de beneficios (lecciones cortas, 100% en español, sin publicidad invasiva, todo a tu alcance) con botón de contacto.
 
+## Preguntas frecuentes
+
+- ¿Qué es Denchi no Nihongo? Una app gratuita en español para repasar japonés (hiragana, katakana, kanji, vocabulario y ejercicios auditivos) desde el celular.
+- ¿Cuánto cuesta? Es gratuita y sin publicidad invasiva.
+- ¿Para qué sistema operativo está disponible? Android, vía Play Store.
+- ¿Cómo la pruebo? Escribiendo por WhatsApp desde el botón "Quiero probar la app" de la landing.
+
 ## Contacto
 
-- WhatsApp: los botones "Quiero probar la app" abren un chat de WhatsApp para acceder a la app.
+- WhatsApp: https://wa.me/5491126231993?text=%C2%A1Hola!%20Quiero%20probar%20Denchi%20no%20Nihongo%20%F0%9F%99%8C — los botones "Quiero probar la app" abren este chat para acceder a la app.

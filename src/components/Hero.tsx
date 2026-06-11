@@ -101,6 +101,7 @@ export default function Hero() {
             src={heroPhone}
             alt="Vista previa de la app Denchi no Nihongo en un celular"
             className="absolute inset-0 h-full w-full"
+            fetchPriority="high"
             animate={shouldReduceMotion ? undefined : { y: [0, -12, 0] }}
             transition={shouldReduceMotion ? undefined : { duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           />
