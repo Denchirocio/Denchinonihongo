@@ -13,6 +13,12 @@ export default function Header() {
           </span>
         </div>
         <a
+          href="#faqs"
+          className="hidden text-sm font-medium text-black/70 transition-colors hover:text-[#296ef2] sm:block"
+        >
+          FAQs
+        </a>
+        <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
