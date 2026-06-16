@@ -30,7 +30,7 @@ export default function Reviews() {
           variants={fadeInUp}
           src="/reseñas.png"
           alt="Denchi con un cartel de reseñas"
-          className="w-72 sm:w-96"
+          className="w-full max-w-xs sm:w-96"
         />
 
         <motion.h2
@@ -40,7 +40,30 @@ export default function Reviews() {
           Usuarios reales, aprendizaje real
         </motion.h2>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Mobile: carrusel swipeable */}
+        <div className="scroll-hide w-full overflow-x-auto scroll-smooth snap-x snap-mandatory sm:hidden">
+          <div className="flex gap-4">
+            {reviews.map((review) => (
+              <div
+                key={review.author}
+                className="flex w-full shrink-0 snap-center flex-col gap-4 rounded-2xl border border-[#d9d9d9] bg-white p-6"
+              >
+                <div className="flex items-center justify-between">
+                  <p className="font-semibold text-[#296ef2]">— {review.author}</p>
+                  <div aria-label="5 estrellas" className="flex gap-0.5">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <span key={i} aria-hidden="true" className="text-xl">⭐</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-base leading-7 text-black">"{review.text}"</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: grilla */}
+        <div className="hidden w-full sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {reviews.map((review) => (
             <motion.div
               key={review.author}
