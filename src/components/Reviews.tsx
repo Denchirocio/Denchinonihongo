@@ -99,8 +99,8 @@ export default function Reviews() {
                 aria-selected={i === currentIndex}
                 aria-label={`Reseña ${i + 1}`}
                 onClick={() => goTo(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === currentIndex ? 'w-5 bg-[#296ef2]' : 'w-2 bg-[#d9d9d9]'
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  i === currentIndex ? 'w-8 bg-[#296ef2]' : 'w-3 bg-[#c4c4c4]'
                 }`}
               />
             ))}
