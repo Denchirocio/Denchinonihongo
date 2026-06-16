@@ -49,7 +49,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
+    <section id="resenas" className="scroll-mt-20 bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

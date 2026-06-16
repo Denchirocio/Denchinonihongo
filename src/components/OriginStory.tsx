@@ -38,7 +38,7 @@ const timelineSteps = [
 
 export default function OriginStory() {
   return (
-    <section className="bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
+    <section id="historia" className="scroll-mt-20 bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-16 sm:gap-20">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <motion.div

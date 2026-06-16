@@ -21,7 +21,7 @@ const cards = [
 
 export default function FeatureCards() {
   return (
-    <section className="bg-[#f4f7fe] px-6 py-16 sm:py-20">
+    <section id="funciones" className="scroll-mt-20 bg-[#f4f7fe] px-6 py-16 sm:py-20">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

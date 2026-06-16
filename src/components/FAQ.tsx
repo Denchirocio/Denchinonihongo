@@ -32,7 +32,7 @@ export default function FAQ() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="faqs" className="bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
+    <section id="faqs" className="scroll-mt-20 bg-[#fbfcfd] px-6 py-12 sm:px-12 sm:py-16">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
