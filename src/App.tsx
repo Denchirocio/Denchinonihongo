@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import FeatureCards from './components/FeatureCards';
 import OriginStory from './components/OriginStory';
+import Reviews from './components/Reviews';
 import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <FeatureCards />
         <OriginStory />
+        <Reviews />
         <CtaSection />
       </main>
       <Footer />
