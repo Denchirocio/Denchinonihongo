@@ -3,18 +3,9 @@ import { motion } from 'motion/react';
 import { fadeInUp, staggerContainer, viewportOnce } from '../lib/animations';
 
 const reviews = [
-  {
-    text: 'Me encanta el diseño y es una app muy intuitiva.',
-    author: 'Memo',
-  },
-  {
-    text: 'Se nota que está hecha con mucho amor. Es un material de apoyo increíble, 10/10.',
-    author: 'Boris',
-  },
-  {
-    text: 'Me sirvió muchísimo en mi último viaje a Japón, recomendada!',
-    author: 'Agustín',
-  },
+  { text: 'Me encanta el diseño y es una app muy intuitiva.', author: 'Memo' },
+  { text: 'Se nota que está hecha con mucho amor. Es un material de apoyo increíble, 10/10.', author: 'Boris' },
+  { text: 'Me sirvió muchísimo en mi último viaje a Japón, recomendada!', author: 'Agustín' },
 ];
 
 function ReviewCard({ review }: { review: { text: string; author: string } }) {

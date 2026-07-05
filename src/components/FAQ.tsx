@@ -3,27 +3,12 @@ import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { fadeInUp, staggerContainer, viewportOnce } from '../lib/animations';
 
-const faqs = [
-  {
-    q: '¿La app es gratis?',
-    a: 'Sí, Denchi no Nihongo es 100% gratis y sin publicidad invasiva.',
-  },
-  {
-    q: '¿Para qué nivel es?',
-    a: 'Está pensada para principiantes y estudiantes que se preparan para rendir el JLPT N5. Si tomás clases de japonés y querés una herramienta para repasar y reforzar lo que aprendés, Denchi es perfecta para vos.',
-  },
-  {
-    q: '¿Funciona sin internet?',
-    a: 'Sí, podés estudiar desde cualquier lugar sin necesitar conexión.',
-  },
-  {
-    q: '¿Está disponible para iPhone?',
-    a: 'Por ahora solo está en Android (Play Store). ¡Pero estamos trabajando para llegar a más plataformas!',
-  },
-  {
-    q: '¿Van a agregar más contenido?',
-    a: 'Sí, la app está en constante desarrollo. Seguimos sumando funciones y contenido nuevo regularmente.',
-  },
+const faqItems = [
+  { q: '¿La app es gratis?', a: 'Sí, Denchi no Nihongo es 100% gratis y sin publicidad invasiva.' },
+  { q: '¿Para qué nivel es?', a: 'Está pensada para principiantes y estudiantes que se preparan para rendir el JLPT N5. Si tomás clases de japonés y querés una herramienta para repasar y reforzar lo que aprendés, Denchi es perfecta para vos.' },
+  { q: '¿Funciona sin internet?', a: 'Sí, podés estudiar desde cualquier lugar sin necesitar conexión.' },
+  { q: '¿Está disponible para iPhone?', a: 'Por ahora solo está en Android (Play Store). ¡Pero estamos trabajando para llegar a más plataformas!' },
+  { q: '¿Van a agregar más contenido?', a: 'Sí, la app está en constante desarrollo. Seguimos sumando funciones y contenido nuevo regularmente.' },
 ];
 
 export default function FAQ() {
@@ -48,7 +33,7 @@ export default function FAQ() {
         </motion.h2>
 
         <motion.div variants={fadeInUp} className="flex flex-col divide-y divide-[#d9d9d9]">
-          {faqs.map((faq, i) => (
+          {faqItems.map((faq, i) => (
             <div key={faq.q}>
               <button
                 onClick={() => toggle(i)}

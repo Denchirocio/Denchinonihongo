@@ -2,17 +2,17 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import playIcon from '../assets/images/play-icon.webp';
-import { WHATSAPP_URL } from '../lib/constants';
-
-const navLinks = [
-  { label: 'Funciones', href: '#funciones' },
-  { label: 'Historia', href: '#historia' },
-  { label: 'Reseñas', href: '#resenas' },
-  { label: 'FAQs', href: '#faqs' },
-];
+import { PLAY_STORE_URL } from '../lib/constants';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { label: 'Funciones', href: '#funciones' },
+    { label: 'Historia', href: '#historia' },
+    { label: 'Reseñas', href: '#resenas' },
+    { label: 'FAQs', href: '#faqs' },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white">
@@ -42,14 +42,14 @@ export default function Header() {
         {/* Right side */}
         <div className="flex items-center gap-2">
           <a
-            href={WHATSAPP_URL}
+            href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex shrink-0 items-center gap-2 rounded-lg border border-[#176df9] px-3 py-2 text-sm font-normal text-[#176df9] transition-colors hover:bg-[#176df9]/5 sm:px-5 sm:text-base"
           >
             <img src={playIcon} alt="" className="h-5 w-5" />
-            <span className="hidden md:inline">Quiero probar la app</span>
-            <span className="md:hidden">Probar app</span>
+            <span className="hidden md:inline">Descargar app</span>
+            <span className="md:hidden">Descargar</span>
             <span className="sr-only"> (se abre en una pestaña nueva)</span>
           </a>
 

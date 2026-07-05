@@ -4,36 +4,14 @@ import { motion } from 'motion/react';
 import storyIllustration from '../assets/images/story-illustration.webp';
 import { fadeInUp, fadeIn, staggerContainer, viewportOnce } from '../lib/animations';
 
-const timelineSteps = [
-  {
-    emoji: '💡',
-    title: 'Idea',
-    description:
-      'Crear una forma diferente de repasar japonés: simple, rápida, y al alcance de tu mano',
-  },
-  {
-    emoji: '✏️',
-    title: 'Diseño',
-    description:
-      'Creamos el diseño con mucho detalle pensando en cada cosa que deberíamos tener.',
-  },
-  {
-    emoji: '🖥️',
-    title: 'Desarrollo',
-    description: 'Comenzamos el desarrollo con mucha paciencia y emoción.',
-  },
-  {
-    emoji: '🧪',
-    title: 'Testing',
-    description:
-      'Juntamos personas con diferentes roles para probar nuestra app y mejorarla.',
-  },
-  {
-    emoji: '🚀',
-    title: 'Lanzamiento',
-    description:
-      'Lanzamos Denchi no Nihongo en PlayStore para aquellas personas que quieran probarla.',
-  },
+const stepEmojis = ['💡', '✏️', '🖥️', '🧪', '🚀'];
+const steps = ['Idea', 'Diseño', 'Desarrollo', 'Testing', 'Lanzamiento'];
+const stepsDesc = [
+  'Crear una forma diferente de repasar japonés: simple, rápida, y al alcance de tu mano',
+  'Creamos el diseño con mucho detalle pensando en cada cosa que deberíamos tener.',
+  'Comenzamos el desarrollo con mucha paciencia y emoción.',
+  'Juntamos personas con diferentes roles para probar nuestra app y mejorarla.',
+  'Lanzamos Denchi no Nihongo en PlayStore para aquellas personas que quieran probarla.',
 ];
 
 export default function OriginStory() {
@@ -59,14 +37,12 @@ export default function OriginStory() {
             <div className="flex flex-col gap-4 text-base leading-7 text-black sm:text-lg lg:text-2xl lg:leading-8">
               <p>
                 Denchi no Nihongo nació cuando noté que aprender japonés significaba{' '}
-                <span className="font-semibold">usar demasiadas apps distintas</span>: una para
-                hiragana, otra para kanji, otra para vocabulario…
+                <span className="font-semibold">usar demasiadas apps distintas</span>: una para hiragana, otra para kanji, otra para vocabulario…
               </p>
               <p>
                 Entonces pensé en{' '}
                 <span className="font-semibold">
-                  crear un espacio simple y práctico donde cualquier persona pudiera repasar
-                  japonés
+                  crear un espacio simple y práctico donde cualquier persona pudiera repasar japonés
                 </span>{' '}
                 todos los días, en un solo lugar.
               </p>
@@ -111,8 +87,8 @@ export default function OriginStory() {
           </motion.h2>
 
           <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
-            {timelineSteps.map((step, i) => (
-              <Fragment key={step.title}>
+            {steps.map((stepTitle, i) => (
+              <Fragment key={stepTitle}>
                 <motion.div
                   variants={fadeInUp}
                   className="flex items-start gap-4 lg:w-[150px] lg:flex-col lg:items-center lg:gap-4 lg:text-center"
@@ -121,14 +97,14 @@ export default function OriginStory() {
                     aria-hidden="true"
                     className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl border border-[#d9d9d9] bg-white text-3xl lg:h-[72px] lg:w-[72px] lg:text-4xl"
                   >
-                    {step.emoji}
+                    {stepEmojis[i]}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-lg font-semibold text-[#296ef2] lg:text-xl">{step.title}</h3>
-                    <p className="text-sm leading-6 text-black lg:text-base">{step.description}</p>
+                    <h3 className="text-lg font-semibold text-[#296ef2] lg:text-xl">{stepTitle}</h3>
+                    <p className="text-sm leading-6 text-black lg:text-base">{stepsDesc[i]}</p>
                   </div>
                 </motion.div>
-                {i < timelineSteps.length - 1 && (
+                {i < steps.length - 1 && (
                   <div className="hidden lg:mt-9 lg:block lg:h-px lg:flex-1 lg:bg-[#d9d9d9]" />
                 )}
               </Fragment>

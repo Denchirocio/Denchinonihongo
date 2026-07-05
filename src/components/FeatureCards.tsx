@@ -1,23 +1,5 @@
 import { motion } from 'motion/react';
-import card1 from '../assets/images/card1.webp';
-import card2 from '../assets/images/card2.webp';
-import card3 from '../assets/images/card3.webp';
 import { fadeInUp, staggerContainer, viewportOnce } from '../lib/animations';
-
-const cards = [
-  {
-    src: card1,
-    alt: 'Repasa japonés de forma simple: tarjeta de estudio del carácter あ con la mascota de Denchi',
-  },
-  {
-    src: card2,
-    alt: 'Aprende kanji paso a paso: tarjeta de estudio にほん / 日本 / Nihon / Japón',
-  },
-  {
-    src: card3,
-    alt: 'Todo el material en un solo lugar: vocabulario, hiragana y katakana, kanji y ejercicios auditivos',
-  },
-];
 
 export default function FeatureCards() {
   return (
@@ -29,17 +11,47 @@ export default function FeatureCards() {
         viewport={viewportOnce}
         className="mx-auto flex max-w-7xl flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center"
       >
-        {cards.map((card) => (
-          <motion.img
-            key={card.src}
-            src={card.src}
-            alt={card.alt}
-            loading="lazy"
-            variants={fadeInUp}
-            whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
-            className="w-full max-w-xs sm:w-[260px] lg:w-[320px]"
-          />
-        ))}
+        {/* Card 1 */}
+        <motion.div
+          variants={fadeInUp}
+          whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+          className="relative w-full max-w-xs sm:w-[260px] lg:w-[320px]"
+        >
+          <img src="/1.png" alt="" className="w-full" loading="lazy" />
+          <div className="absolute bottom-[8%] left-0 right-0 px-4 text-center">
+            <h3 className="text-xl font-bold text-black lg:text-2xl">Repasa japonés</h3>
+            <p className="text-xl font-bold text-[#296ef2] lg:text-2xl">de forma simple</p>
+            <p className="mx-auto mt-1 text-xs leading-snug text-[#6b7280] lg:text-sm">Lecciones cortas y prácticas para aprender a tu ritmo</p>
+          </div>
+        </motion.div>
+
+        {/* Card 2 */}
+        <motion.div
+          variants={fadeInUp}
+          whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+          className="relative w-full max-w-xs sm:w-[260px] lg:w-[320px]"
+        >
+          <img src="/2.png" alt="" className="w-full" loading="lazy" />
+          <div className="absolute top-[12%] left-0 right-0 px-4 text-center">
+            <h3 className="text-xl font-bold text-black lg:text-2xl">Aprende kanji</h3>
+            <p className="text-xl font-bold text-[#296ef2] lg:text-2xl">paso a paso</p>
+            <p className="mx-auto mt-1 text-xs leading-snug text-[#6b7280] lg:text-sm">Domina los kanji con cards, trazos y ejemplos reales</p>
+          </div>
+        </motion.div>
+
+        {/* Card 3 */}
+        <motion.div
+          variants={fadeInUp}
+          whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+          className="relative w-full max-w-xs sm:w-[260px] lg:w-[320px]"
+        >
+          <img src="/3.png" alt="" className="w-full" loading="lazy" />
+          <div className="absolute bottom-[8%] left-0 right-0 px-4 text-center">
+            <h3 className="text-xl font-bold text-black lg:text-2xl">Todo el material</h3>
+            <p className="text-xl font-bold text-[#296ef2] lg:text-2xl">en un solo lugar</p>
+            <p className="mx-auto mt-1 text-xs leading-snug text-[#6b7280] lg:text-sm">Práctica desde la comodidad de tu casa, con todo en tu celular.</p>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

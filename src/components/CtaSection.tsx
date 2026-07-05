@@ -2,7 +2,7 @@ import { CircleCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 import ctaMascot from '../assets/images/cta-mascot.webp';
 import playIcon from '../assets/images/play-icon.webp';
-import { WHATSAPP_URL } from '../lib/constants';
+import { PLAY_STORE_URL } from '../lib/constants';
 import { fadeInUp, staggerContainer, viewportOnce } from '../lib/animations';
 
 const checklist = ['Lecciones cortas', '100% en español', 'Sin publicidad invasiva', 'Todo a tu alcance'];
@@ -28,7 +28,7 @@ export default function CtaSection() {
               <span className="font-bold text-[#2b7fff]">empieza hoy</span>
             </h2>
             <motion.a
-              href={WHATSAPP_URL}
+              href={PLAY_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
@@ -36,7 +36,7 @@ export default function CtaSection() {
               className="flex items-center gap-2 rounded-lg bg-[#176df9] px-5 py-3 text-lg font-medium text-white sm:text-xl"
             >
               <img src={playIcon} alt="" className="h-6 w-6" />
-              Quiero probar la App!
+              Descargar app
               <span className="sr-only"> (se abre en una pestaña nueva)</span>
             </motion.a>
           </div>
